@@ -46,29 +46,20 @@ Fusion are [here](https://willdonaldson.autodesk360.com/g/shares/SH9285eQTcf875d
 *	Potentiometers in the knuckle are ineffective as the top segment of the finger (where the fingernail would be)   tends to bend first, followed by the second, meaning no reading is collected until the segment closest to the palm   starts rotating. Thus if something blocks the segment closest to the palm, you have no knowledge of the position   of the top two segments, they will begin rotating why the potentiometer reads the finger is at rest, fully extended.   To overcome this you could design a way to have IMU's in the different segments of the finger, or potentiometers in   each of the points of rotation (both of which I don't see as being practical, given the space restraints and the   number of wires required to fit) or a motor encoder to track how many revolutions the motor makes.
 *	Ideally I would actuate the pinky and ring fingers separately, but not of vital importance since you rarely need   to move one without moving the other one.
 *	Tying knot in end of elastic is almost impossible while keeping it taught, had to settle for super glue instead. 
-    #### Thumb
-        *	Axle it spins on is too loose, fortunately this would be a pretty simple fix 
-        *	When the finger is contracted, the finger begins to rotate as well as being contracted because the axle mount on   the thumb rotation servo is too loose, the simple fix would be using a bit of epoxy or superglue.
-        *	The thumb contraction has no postition feedback, this is perhaps the most serious issue with this design as it can  only be controlled by sight or else it will over contract, breaking either the servo or the thumb. Solutions to  this could involve; some sort of mount for a potnetiometer in the thumb to read the position, use of a reference IMU or perhaps a redesign of how the servos controlling the hand such as using a motor encoder to track rotations.
-        *	Some of the issues of the fingers mentioned above in 1.1, translate also into the thumb
-    #### Servos 
-        ##### Continuous Rotation servos (Index and Thumb Contraction)
-            *	Biggest issue is lose of rotation issue as discussed above, better to use small, geared motors with a motor  
-                encoder.
-            *	Occassionally the fishing line can slip off the pulleys, especially if the fishing line is not under constant  
-                tension 
-            *	Because the fishing line can wrap around the pulley in both directions, if you are trying to relax the finger  
-                by unwinding the pulley and the finger gets stuck (as mentioned above in section 1.1 due to coarse joints) the  
-                pulley can keep rotating to the point the fishing line starts wrapping around the pulley in the opposite  
-                direction, resulting in the finger being contracted without ever fully relaxing (since the pots only measure 
-                knuckle rotation and have no info on the top two segments)
-        ##### Compressed 2-in-1 continuous rotation geared dc motors
-            *	For the most part this design worked extremely well (since it is "technically" the same as a normal servo, see  
-                comments in instructable link for explanation) the biggest issue was my, axle substitute is too narrow,  
-                resulting in large vibrations in the gears, later damaging the plastic teeth of the gears actuating the  
-                pinky/ring finger combination. Had I found an axle of perfect diameter I believe this would be a null issue.
-        ##### Thumb rotation servo
-            *	All in all aside from the slipping issue mentioned under section 1.2 this operated as expected.
+#### Thumb
+*	Axle it spins on is too loose, fortunately this would be a pretty simple fix 
+*	When the finger is contracted, the finger begins to rotate as well as being contracted because the axle mount on   the thumb rotation servo is too loose, the simple fix would be using a bit of epoxy or superglue.
+*	The thumb contraction has no postition feedback, this is perhaps the most serious issue with this design as it can  only be controlled by sight or else it will over contract, breaking either the servo or the thumb. Solutions to  this could involve; some sort of mount for a potnetiometer in the thumb to read the position, use of a reference IMU or perhaps a redesign of how the servos controlling the hand such as using a motor encoder to track rotations.
+*	Some of the issues of the fingers mentioned above in 1.1, translate also into the thumb
+#### Servos 
+##### Continuous Rotation servos (Index and Thumb Contraction)
+*	Biggest issue is lose of rotation issue as discussed above, better to use small, geared motors with a motor  encoder.
+*	Occassionally the fishing line can slip off the pulleys, especially if the fishing line is not under constant tension. 
+*	Because the fishing line can wrap around the pulley in both directions, if you are trying to relax the finger  by unwinding the pulley and the finger gets stuck (as mentioned above in section 1.1 due to coarse joints) the  pulley can keep rotating to the point the fishing line starts wrapping around the pulley in the opposite  direction, resulting in the finger being contracted without ever fully relaxing (since the pots only measure knuckle rotation and have no info on the top two segments)
+##### Compressed 2-in-1 continuous rotation geared dc motors
+*	For the most part this design worked extremely well (since it is "technically" the same as a normal servo, see comments in instructable link for explanation) the biggest issue was my, axle substitute is too narrow, resulting in large vibrations in the gears, later damaging the plastic teeth of the gears actuating the pinky/ring finger combination. Had I found an axle of perfect diameter I believe this would be a null issue.
+##### Thumb rotation servo
+*	All in all aside from the slipping issue mentioned under section 1.2 this operated as expected.
 ### Palm
 *	Thumb contraction servo is free to move, not enough support walls to hold it in place, instead had to use glue, something I would prefer not to use
 *	Ideally I would place an additional screw hole near the pinky finger
